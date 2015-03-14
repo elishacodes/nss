@@ -14,7 +14,38 @@
 
 */
 
-var favoriteFood = {
 
+
+var favoriteFood = {
+	base: "dough",
+	meat: false,
+	spicy: true,
+	size: "large",
+	vegetables: [], 
+	addTopping: function(vegetable){
+		this.vegetables.push(vegetable);
+	}
 }
 
+var myFavoriteFood = favoriteFood;
+favoriteFood.addTopping("broccoli");
+favoriteFood.addTopping("corn");
+
+
+console.log(myFavoriteFood);
+
+// var module = (function(){
+//  var color = "blue";
+
+//  return{
+//   a:1,
+//   getColor: function (){
+//     return color;
+//   }
+
+//  };
+// })();
+
+// var myModule = module;
+// console.log(module);
+// console.log(module.getColor());

@@ -1,27 +1,44 @@
-var basicCarModule = {
-  color: "blue",
-  size: "sedan",
-  price: 0,
+// var basicCarModule = {
+//   color: "blue",
+//   size: "sedan",
 
-  options: {
-    powerSteering: true,
-    sunroof: true,
-    heatedSeats: false,
-    racingStripes: false
-  },
+//   option:{
+//     sunRoof: true,
+//     racingStripes: false,
+//     spoiler: false,
+//     leatherSeats: true,
+//     headedSeats: true,
+//     underLighting: false
+//   },
 
-  setPrice: function (newPrice) {
-    this.price = newPrice;
-  },
+//   setColor: function (color){
+//     this.color = color;
+//   }, 
+//   setOptions: function (options){
+//     this.options = options;
+//   }
+// }
 
-  setColor: function (newColor) {
-    this.color = newColor;
+
+
+// basicCarModule.setColor("green");
+// basicCarModule.setOptions({});
+
+// console.log('basicCarModule', basicCarModule);
+
+//IIFE
+
+var module = (function(){
+ var color = "blue";
+
+ return{
+  a:1,
+  getColor: function (){
+    return color;
   }
 
-}
+ };
+})();
 
-console.log(basicCarModule);
-
-basicCarModule.setColor("red");
-
-console.log(basicCarModule);
+var myModule = module;
+console.log(module);
